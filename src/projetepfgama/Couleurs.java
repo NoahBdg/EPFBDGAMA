@@ -51,7 +51,7 @@ public enum Couleurs {
         return color;
     }
     
-    public int value() {
+    public int valeur() {
         return valeur;
     }
     

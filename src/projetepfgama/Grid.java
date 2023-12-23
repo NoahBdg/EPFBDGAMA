@@ -62,7 +62,7 @@ public class Grid extends JPanel {
         }
         addNewTile();
         addNewTile();
-        hote.statusBar.setText("");
+        hote.Bar.setText("");
     }
 
     private List<Integer> IndexVide() {

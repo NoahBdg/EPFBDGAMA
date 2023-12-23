@@ -31,6 +31,22 @@ public class Controles extends KeyAdapter{
         init(CTRL);
     }
     
+    /**
+     *La classe Controles gère les interactions clavier avec le jeu Threes.
+ * Elle permet de capturer les pressions de touches et d'associer des actions à chaque touche.
+ *
+ * La méthode statique {@code getKeyPress(Grid g)} permet de récupérer une instance de Controles pour la grille spécifiée.
+ *
+ * La méthode {@code init(Integer[] kcs)} initialise les touches en associant chaque code de touche avec la méthode correspondante dans la classe Grid.
+ *
+ * La méthode {@code keyPressed(KeyEvent k)} est appelée lorsque qu'une touche est pressée.
+ * Elle récupère l'action associée à la touche pressée à partir du mapping défini précédemment.
+ * Ensuite, elle invoque la méthode associée sur la grille et met à jour l'affichage.
+ * Si aucun mouvement n'est possible après la pression de la touche, la partie est considérée comme perdue.
+ * 
+     * @param g
+     * @return
+     */
     public static Controles getKeyPress(Grid g) {
         board = g;
         return CONT;

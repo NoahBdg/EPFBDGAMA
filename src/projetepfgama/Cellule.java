@@ -46,6 +46,22 @@ public class Cellule {
     }
 
     // constructor
+
+    /**
+     ** La classe Cellule représente une cellule dans le jeu Threes.
+ * Chaque cellule a une couleur associée qui détermine sa valeur.
+ * 
+ * Le constructeur {@code Cellule(Couleurs n)} permet d'initialiser une cellule avec une couleur donnée.
+ * La méthode {@code valeur()} renvoie la couleur de la cellule.
+ * 
+ * La méthode statique {@code valeurDe(int num)} crée une nouvelle instance de Cellule à partir d'un entier représentant sa valeur.
+ * 
+ * La méthode {@code getDouble()} renvoie une nouvelle instance de Cellule avec une valeur deux fois plus grande que la valeur actuelle.
+ * 
+ * La méthode {@code vide()} vérifie si la cellule est vide, c'est-à-dire si sa valeur est égale à Couleurs._0.
+ 
+     * @param n
+     */
     public Cellule(Couleurs n) {
         tac = n;
     }
@@ -66,6 +82,21 @@ public class Cellule {
         return tac == Couleurs._0;
     }
 
+    /**
+     *La méthode equals compare cette cellule à un autre objet pour déterminer l'égalité.
+ * Deux cellules sont considérées égales si elles ont la même couleur.
+ *
+ * @param obj L'objet à comparer avec la cellule.
+ * @return true si les cellules sont égales, false sinon.
+ *
+ * La méthode statique {@code CelluleAleatoire()} génère aléatoirement une nouvelle cellule avec une probabilité de 15% pour un 4
+ * et 85% pour un 2 à chaque coup. Elle est utilisée pour le spawn des nouvelles cellules lors du déplacement du joueur.
+ *
+ * @return Une nouvelle cellule aléatoire (2 ou 4) selon les probabilités définies.
+ 
+     * @param obj
+    
+     */
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
@@ -82,6 +113,12 @@ public class Cellule {
         return Math.random() < 0.15 ? Quatre : Deux;
     }
 
+    /**
+     *La méthode toString retourne une représentation sous forme de chaîne de caractères de la valeur de la cellule.
+ * Utilise le formatage pour garantir une largeur de champ de 4 caractères.
+ *
+     * @return
+     */
     public String toString() {
         return String.format("%1$4d", tac.valeur());
 

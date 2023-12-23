@@ -82,7 +82,7 @@ public class Grid extends JPanel {
         return cellule[x + y * diff.getGridSize()];
     }
 
-    boolean checkIfCanMove() {
+    boolean MvtPoss() {
         if (!isGridFull()) {
             return true;
         }
